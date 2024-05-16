@@ -1,0 +1,120 @@
+:root{
+    --bg-img: linear-gradient(
+        45deg,
+        hsl(240deg 100% 20%) 1%,
+        hsl(263deg 10% 34%) 48%,
+        hsl(40deg 14% 41%) 61%,
+        hsl(49deg 28% 45%) 69%,
+        hsl(51deg 38% 48%) 74%,
+        hsl(52deg 48% 51%) 77%,
+        hsl(53deg 61% 52%) 80%,
+        hsl(54deg 75% 54%) 83%,
+        hsl(54deg 88% 54%) 87%,
+        hsl(55deg 100% 50%) 100%
+      );
+      --txt-color: #e4e4e4;
+}
+
+*{
+    padding:  0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    /* background-image: var(--bg-img); */
+    color: var(--txt-color);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.outer-container {
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    height: 60%;
+    color: #333;
+    transition: all 0.2s;
+}
+.outer-container:hover , .outer-container:focus{
+    background-color: #333;
+    border: 1px solid #333;
+    color: var(--txt-color);
+}
+
+.outer-container:hover .inner-container  button , .outer-container:focus .inner-container  button{
+    background: #e0e0e0;
+}
+.outer-container h1{
+    text-align: center;
+    width: 80%;
+    letter-spacing: 2px;
+}
+.inner-container{
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.inner-container h3{
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 2px;
+}
+.inner-container input{
+    padding: 10px;
+    border: 1px solid hsl(240deg 100% 20%);
+    border-radius: 10px;
+}
+
+.inner-container  button {
+    display: block;
+    width: 139px;
+    height: 15,500px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid hsl(240deg 100% 20%);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+
+}
+
+.inner-container input:focus{
+    border: 1px solid hsl(55deg 100% 50%);
+    outline: 0;
+}
+.inner-container  button:hover, .inner-container  button:focus{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#output {
+    text-align: center;
+    width: 270px;
+}
+.alert {
+    color: rgb(212, 73, 73);
+}
+.value-message {
+    color: rgb(35, 230, 45);
+}
